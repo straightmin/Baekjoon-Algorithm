@@ -5,10 +5,10 @@ using namespace std;
 int DP[1001][1001] = {};
 
 int top_down(int n, int k){
-    if(n == k){
+    if(n == k || k == 0){
         return DP[n][k] = 1;
     }
-    if(k <= 1){
+    if(k == 1){
         return DP[n][k] = n;
     }
     if(DP[n][k] != 0){
